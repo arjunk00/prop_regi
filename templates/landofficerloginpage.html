@@ -11,21 +11,24 @@
 
 <body>
   <div class="center">
-    <h1>Officer Login</h1>
+    <h1>Login</h1>
     <form method="post" action="officerlogin">
         {% csrf_token %}
       <div class="txt_field">
         <input type="text" name="username" required>
         <span></span>
-        <label>Officer ID</label>
+        <label>Voter ID</label>
       </div>
       <div class="txt_field">
         <input type="password" name="password" required>
         <span></span>
-        <label>Private Key</label>
+        <label>Password</label>
       </div>
+      <!-- <div class="pass">Forgot Password?</div> -->
       <input type="submit" value="Login">
+      <a href="afterlogin.html"></a>
       <div class="signup_link">
+          <a href="VOTER APPLICATION.html"></a>
       </div>
     </form>
   </div>

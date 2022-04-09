@@ -210,7 +210,7 @@ def officerlogin(request):
             auth.login(request, user)
             return redirect('/registration_page')
         else:
-            messages.info('wrong login credentials')
+            messages.info(request, 'wrong login credentials')
             return redirect('/officerlogin')
     else:
         return render(request, 'landofficerloginpage.html')
