@@ -15,12 +15,12 @@
     <form method="post" action="officerlogin">
         {% csrf_token %}
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" name="username" required>
         <span></span>
         <label>Officer ID</label>
       </div>
       <div class="txt_field">
-        <input type="password" required>
+        <input type="password" name="password" required>
         <span></span>
         <label>Private Key</label>
       </div>
