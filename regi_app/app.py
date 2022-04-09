@@ -177,3 +177,8 @@ print(contract.functions.getDetails().call())
 tx_hash = contract.functions.setDetails('Seller','buyer','5000','122345','land id','aadharc','aadharb','oldc','newc').transact()
 tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
 print(contract.functions.getDetails().call())
+
+print(contract.functions.getDetails().call())
+tx_hash = contract.functions.setDetails('Ashish','Ujjwal','50000000','98765','12345','3476978953','439865893467','4985723','4985723').transact()
+tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
+print(contract.functions.getDetails().call())
