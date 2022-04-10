@@ -1,5 +1,6 @@
 from web3 import Web3
 import json
+from views import blockchain
 
 ganache_url='http://127.0.0.1:7545'
 web3=Web3(Web3.HTTPProvider(ganache_url))
@@ -168,17 +169,15 @@ contract = web3.eth.contract(
     address=tx_reciept.contractAddress,
     abi=abi
 )
-print(contract.functions.getCurrentOwner().call())
-tx_hash = contract.functions.setCurrentOwner('Ashish').transact()
-tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
-print(contract.functions.getCurrentOwner().call())
+current_owner = contract.functions.getCurrentOwner().call()
+# if current_owner==
 
-print(contract.functions.getDetails().call())
-tx_hash = contract.functions.setDetails('Seller','buyer','5000','122345','land id','aadharc','aadharb','oldc','newc').transact()
-tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
-print(contract.functions.getDetails().call())
-
-print(contract.functions.getDetails().call())
-tx_hash = contract.functions.setDetails('Ashish','Ujjwal','50000000','98765','12345','3476978953','439865893467','4985723','4985723').transact()
-tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
-print(contract.functions.getDetails().call())
+# print(contract.functions.getDetails().call())
+# tx_hash = contract.functions.setDetails('Seller','buyer','5000','122345','land id','aadharc','aadharb','oldc','newc').transact()
+# tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
+# print(contract.functions.getDetails().call())
+#
+# print(contract.functions.getDetails().call())
+# tx_hash = contract.functions.setDetails('Ashish','Ujjwal','50000000','98765','12345','3476978953','439865893467','4985723','4985723').transact()
+# tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
+# print(contract.functions.getDetails().call())
