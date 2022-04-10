@@ -8,7 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     
     <!-- nav bar -->
@@ -29,7 +32,7 @@
                     <a href="#">home</a>
                 </li>
                 <li>
-                    <a href="#">about</a>
+                    <a href="./our_team.html">about us</a>
                 </li>
                 <li>
                     <a href="./landofficerloginpage.html">officer login</a>
@@ -69,6 +72,26 @@
         </div>
     </nav>
 
+    <div class="owl-carousel owl-theme" style="margin-top: 60px;">
+        <div class="item">
+            <img src="/static/images/img1.jpg" alt="first" style="height: 220px; width: 300px;">
+        </div>
+        <div class="item">
+            <img src="/static/images/img2.jpg" alt="second" style="height: 220px; width: 300px;">
+        </div>
+        <div class="item">
+            <img src="/static/images/img3.png" alt="third " style="height: 220px; width: 300px;">
+            
+        </div>
+        <div class="item">
+            <img src="/static/images/img4.jpg" alt="fourth" style="height: 220px; width: 300px;">
+        
+        </div>
+        <div class="item">
+            <img src="/static/images/img5.jpg" alt="fifth" style="height: 220px; width: 300px;">
+        
+        </div>
+    </div>
 <!---------------------------------------------------------- about us  ------------------------------------------------------------ -->
 
     <section class="section about-sec">
@@ -161,15 +184,38 @@
         </ul>
         <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="./our_team.html">About us</a></li>
             <li class="menu__item"><a class="menu__link" href="./landofficerloginpage.html">officer login</a></li>
-            <!-- <li class="menu__item"><a class="menu__link" href="#">Team</a></li> -->
             <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
     
         </ul>
         <p>&copy;2022 Prop Regi | All Rights Reserved</p>
     </footer>
     <!-- js -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    stagePadding: 50,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+    })
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="../static/js_files/index.js"></script>
