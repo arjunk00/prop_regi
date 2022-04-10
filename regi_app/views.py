@@ -256,3 +256,6 @@ def contactus(request):
 
 def success(request):
     return render(request, 'success.html')
+
+def marketplace(request):
+    return render(request, 'marketplace.html')
