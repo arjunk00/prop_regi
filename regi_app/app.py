@@ -161,12 +161,12 @@ bytecode = '608060405234801561001057600080fd5b50610e1c806100206000396000f3fe6080
 set=web3.eth.contract(abi=abi, bytecode=bytecode)
 setDetails=web3.eth.contract(abi=abi, bytecode=bytecode)
 
-tx_hash=setDetails.constructor().transact()
+# tx_hash=setDetails.constructor().transact()
 
-tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
+# tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
 
 contract = web3.eth.contract(
-    address=tx_reciept.contractAddress,
+    address='0xD172BDE953c084Dc998d8eE363745BF503eF5cf9',
     abi=abi
 )
 current_owner = contract.functions.getCurrentOwner().call()

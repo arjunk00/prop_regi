@@ -9,9 +9,10 @@
 </head>
 <body>
 
-    <form class="main" method="post" action="blockchain">
+    <form style="display: flex;flex-direction: column" class="main" method="post" action="blockchain">
         {% csrf_token %}
         <!-- -------------------------------------------------------------for seller -------------------------------------------------------- -->
+        <div style="display: flex;height:80vh ">
         <div class="container">
             <div id="form" class="form">
                 <h2> <u> Seller Details </u> </h2>
@@ -22,9 +23,7 @@
                 </div>
                 <div class="form-control">
                     <label for="seller_aadhar_no">seller aadhar no</label>
-                    <input type="text" name="seller_aadhar_no" placeholder="Seller's land private key" />
-                    <label for="land_id">Land's ID</label>
-                    <input type="text" id="land_id" placeholder="Land ID" />
+                    <input type="number" name="seller_aadhar_no" placeholder="Seller's land private key" />
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
@@ -33,22 +32,16 @@
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="land_area">Land area</label>
-                    <input type="text" id="land_area" placeholder="Land area" />
+                    <label for="land_coordinates">old coordinates</label>
+                    <input type="text" name="old_coordinates" />
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="land_coordinates">old Land coordinates</label>
-                    <input type="text" id="old_land_coordinates" placeholder="Longitude" />
-                    <input type="text" id="old_land_coordinates" placeholder="Latitude" />
+                    <label for="seller_email">seller email</label>
+                    <input type="text" name="seller_email" />
                     <small>Error message</small>
                 </div>
-                
-                <div class="form-control">
-                    <label for="price">agreed price</label>
-                    <input type="number" id="price" placeholder="price" />
-                    <small>Error message</small>
-                </div>
+
                 <!-- <button type="submit">Submit</button> -->
             </div>
         </div>
@@ -63,8 +56,8 @@
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="land_id">Land's ID</label>
-                    <input type="text" id="land_id" placeholder="Land ID" />
+                    <label for="land&s_coordinate">buyer aadhar no</label>
+                    <input type="number" name="buyer_aadhar_no" />
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
@@ -78,19 +71,14 @@
                     <small>Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="price">agreed price</label>
-                    <input type="number" id="price" placeholder="price" />
+                    <label for="seller_email">buyer email</label>
+                    <input type="text" name="buyer_email" />
                     <small>Error message</small>
                 </div>
-                <div class="form-control">
-                    <label for="land_coordinates">new Land coordinates</label>
-                    <input type="text" id="new_land_coordinates" placeholder="Longitude" />
-                    <input type="text" id="new_land_coordinates" placeholder="Latitude" />
-                    <small>Error message</small>
-                </div>
+
             </div>
         </div>
-
+    </div>
         <button class="submit_button" type="submit" >Submit</button>
     </form>
 {#    <button class="submit_button" type="submit" >Submit</button>#}

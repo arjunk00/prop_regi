@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -29,13 +31,13 @@
                     <a href="#">home</a>
                 </li>
                 <li>
-                    <a href="#">about</a>
+                    <a href="#" onclick="location.href='/aboutus'">about</a>
                 </li>
                 <li>
                     <a href="#" onclick="location.href='/officerlogin'">officer login</a>
                 </li>
                 <li>
-                    <a href="./contact_us.html">contact</a>
+                    <a href="#"  onclick="location.href='/contactus'">contact</a>
                 </li>
             </ul>
             <!-- social media -->
@@ -68,8 +70,28 @@
             </ul>
         </div>
     </nav>
+                                                                    {#    slideshow carousel#}
+    <div class="owl-carousel owl-theme" style="margin-top: 60px;">
+        <div class="item">
+            <img src="/static/images/img1.jpg" alt="first" style="height: 220px; width: 300px;">
+        </div>
+        <div class="item">
+            <img src="/static/images/img2.jpg" alt="second" style="height: 220px; width: 300px;">
+        </div>
+        <div class="item">
+            <img src="/static/images/img3.png" alt="third " style="height: 220px; width: 300px;">
 
-<!---------------------------------------------------------- about us  ------------------------------------------------------------ -->
+        </div>
+        <div class="item">
+            <img src="/static/images/img4.jpg" alt="fourth" style="height: 220px; width: 300px;">
+
+        </div>
+        <div class="item">
+            <img src="/static/images/img5.jpg" alt="fifth" style="height: 220px; width: 300px;">
+
+        </div>
+    </div>
+    <!---------------------------------------------------------- about us  ------------------------------------------------------------ -->
 
     <section class="section about-sec">
         <div class="abt-title">
@@ -93,12 +115,10 @@
                     <div class="content active" id="history">
                         <h4>history</h4>
                         <p>
-                            The first Travel Agency of the world was established by Thomas Cook in 1845 in England. The use
-                            of the term travel trade
-                            dates back from the early years of the 19th century, but this should not obscure the fact that
-                            what we today describe as
-                            travel trade (travel agency and tour operation business) was taking place much earlier in
-                            history.
+                            The <strong>property forgery</strong> issues are widespread and the original owners of the property are not able
+                            to get justice sometimes,even after such a good judiciary system.
+                            The true owners wait for a long time for his own resources and sometimes even end losing their
+                            assets.
                         </p>
                     </div>
                     <!-- end of single item -->
@@ -106,11 +126,9 @@
                     <div class="content" id="vision">
                         <h4>vision</h4>
                         <p>
-                            Our Mission is to perform and deliver excellent quality service to our clients. Providing them
-                            unforgettable travel,
-                            enjoyable, with guaranteed services that exceed their expectations With this objective, we aim
-                            to earn the reputation as
-                            "Your Preferred Travel Agency".
+                            We at <strong>Prop regi</strong> are trying to make  a transparent system for handling problems like land forgery
+                            using the <strong>Blockchain Technology</strong>.This will solve such issues in no time , even reduce the probability
+                            of such incidences to happen.
                         </p>
                         <!-- <ul>
                                     <li>list item</li>
@@ -123,11 +141,9 @@
                     <div class="content" id="goals">
                         <h4>goals</h4>
                         <p>
-                            The specific objectives of the company include: To manage all the travel requirements of the
-                            companies while providing
-                            ease and sort of convenience to the customers. To add value to the travel sector of different
-                            companies. To offer the
-                            traveling services at very reasonable prices.
+                            Our <strong>Goal</strong> is to make the most transparent and consistent property registration system in our country,
+                            and awaring people all around about such a technology that preserves the time of judiciary which is being wasted
+                            in handling issues like land occupying,land forgery etc.
                         </p>
                     </div>
                     <!-- end of single item -->
@@ -160,16 +176,39 @@
                 </a></li>
         </ul>
         <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" >Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" onclick="location.href='/aboutus'">About</a></li>
             <li class="menu__item"><a class="menu__link" href="#" onclick="location.href='/officerlogin'">officer login</a></li>
             <!-- <li class="menu__item"><a class="menu__link" href="#">Team</a></li> -->
-            <li class="menu__item"><a class="menu__link" href="./contact_us.html">Contact</a></li>
+            <li class="menu__item"><a class="menu__link" href="#"  onclick="location.href='/contactus'">Contact</a></li>
     
         </ul>
         <p>&copy;2022 Prop Regi | All Rights Reserved</p>
     </footer>
     <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    stagePadding: 50,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+    })
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="{% static 'js_files/index.js' %}"></script>

@@ -4,6 +4,7 @@ import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.core.mail import send_mail
 from django.views.decorators.cache import cache_control
 
 from django.conf import settings
@@ -23,6 +24,9 @@ def blockchain(request):
         land_id = request.POST['land_id']
         old_coordinates = request.POST['old_coordinates']
         new_coordinates = request.POST['new_coordinates']
+        seller_email = request.POST['seller_email']
+        buyer_email = request.POST['buyer_email']
+
 
 
     ganache_url = 'http://127.0.0.1:7545'
@@ -193,8 +197,29 @@ def blockchain(request):
     tx_hash = contract.functions.setDetails(buyer_name, seller_name, registration_price, land_id, seller_aadhar_no, buyer_aadhar_no,
                                             old_coordinates, new_coordinates).transact()
     tx_reciept = web3.eth.wait_for_transaction_receipt(tx_hash)
-    print(contract.functions.getDetails().call())
-    return redirect('/')
+    print(tx_reciept['from'])
+
+    subject = 'Transactin reciept for your land registry'
+    # message = f'Hi this is the transaction reciept for your recent land transaction:  {tx_reciept}'
+    message = f'''
+        Hi! This is your transaction reciept for your latest land transaction smart contract:
+        Buyer and Seller Details:
+        
+        seller name : {seller_name}
+        buyer name : {buyer_name}
+        deal price : {registration_price}
+        land id : {land_id}
+        transactionHash = {tx_reciept['transactionHash']}
+        blockHash = {tx_reciept['blockHash']}
+        blockNumber = {tx_reciept['blockNumber']}
+        from = {tx_reciept['from']}
+        to = {tx_reciept['to']}
+        gasUsed = {tx_reciept['gasUsed']}
+    '''
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [buyer_email, seller_email]
+    send_mail(subject, message, email_from, recipient_list)
+    return redirect('/success')
 
 
 def officerlogin(request):
@@ -214,3 +239,20 @@ def officerlogin(request):
 
 def registration_page(request):
     return render(request, 'buyer_seller_detail_entry.html')
+
+def sendmail(email, tx_reciept):
+    subject = 'Transactin reciept for your land registry'
+    message = f'Hi this is the transaction reciept for your recent land transaction:  {tx_reciept}'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['arjunkulkarni23@gmail.com']
+    send_mail(subject, message, email_from, recipient_list)
+
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
+
+def contactus(request):
+    return render(request, 'contactus.html')
+
+def success(request):
+    return render(request, 'success.html')
