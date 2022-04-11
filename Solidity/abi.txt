@@ -1,0 +1,142 @@
+[
+	{
+		"inputs": [],
+		"name": "getCurrentOwner",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getDetails",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getPreviousOwner",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_input",
+				"type": "string"
+			}
+		],
+		"name": "setCurrentOwner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "CurrentOwner",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Buyer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Price",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "LandId",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "aadharCurrOwner",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "aadharBuyer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "OldLandCoord",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "NewLandCoord",
+				"type": "string"
+			}
+		],
+		"name": "setDetails",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
